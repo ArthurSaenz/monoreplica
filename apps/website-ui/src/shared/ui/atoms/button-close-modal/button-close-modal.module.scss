@@ -1,0 +1,20 @@
+.close-btn {
+  z-index: calc(var(--z-index-modal) + 5);
+  display: grid;
+  place-content: center;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

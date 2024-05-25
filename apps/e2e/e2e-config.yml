@@ -1,0 +1,12 @@
+Tags Group:
+  Type:
+    - '@smoke'
+    - '@regression'
+    - '@performance'
+    - '@slow'
+    - '@dev'
+
+  Features:
+    - '@home'
+    - '@auth'
+    - '@search'

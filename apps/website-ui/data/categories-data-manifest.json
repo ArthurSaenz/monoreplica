@@ -1,0 +1,38 @@
+{
+  "raw": {
+    "categories": [
+      {
+        "id": "Flights",
+        "catalogLink": "https://{{projectName}}/dynamic/client/flights.json",
+        "categoryColor": "#fc64b9",
+        "icon": "/media/categories/flights.svg",
+        "link": "/flights",
+        "title": "Flights",
+        "userJourneyType": "FLIGHTS"
+      },
+      {
+        "id": "Domestic",
+        "catalogLink": "https://{{projectName}}/dynamic/client/domestic.json",
+        "categoryColor": "#3eb3c7",
+        "icon": "/media/categories/domestic.svg",
+        "link": "/domestic",
+        "title": "Domestic",
+        "userJourneyType": "DOMESTIC"
+      },
+      {
+        "id": "Shows",
+        "catalogLink": "https://{{projectName}}/dynamic/client/shows.json",
+        "categoryColor": "#f4646d",
+        "icon": "/media/categories/shows.svg",
+        "link": "/shows",
+        "title": "Shows",
+        "userJourneyType": "SHOWS"
+      }
+    ],
+    "appVersion": {
+      "ios": "4.1.2",
+      "android": "4.1.2"
+    }
+  },
+  "computed": {}
+}

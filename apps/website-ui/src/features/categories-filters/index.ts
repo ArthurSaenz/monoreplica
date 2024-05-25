@@ -1,0 +1,1 @@
+export { CategoriesFiltersController } from './controller'

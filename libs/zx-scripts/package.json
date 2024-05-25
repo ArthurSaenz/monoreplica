@@ -1,0 +1,35 @@
+{
+  "name": "@monorepo/scripts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build, lint, test, format, and release your React app or JS library.",
+  "author": "Arthur Saenko <arthur.saenko@uptarget.co> (https://github.com/ArthurSaenz)",
+  "keywords": [
+    "scripts",
+    "infrastructure scripts",
+    "bash commands",
+    "dev scripts"
+  ],
+  "main": "index.js",
+  "type": "commonjs",
+  "bin": "./bin/scripts",
+  "scripts": {
+    "prettier-fix": "prettier **/* --write --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore",
+    "prettier-check": "prettier **/* --check --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore"
+  },
+  "dependencies": {
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "commander": "^12.1.0",
+    "config": "^3.3.11",
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.22",
+    "zx": "^8.1.1"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}

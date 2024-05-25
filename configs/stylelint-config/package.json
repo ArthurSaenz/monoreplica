@@ -1,0 +1,27 @@
+{
+  "name": "@monorepo/stylelint-config",
+  "private": true,
+  "type": "module",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "version": "0.1.0",
+  "description": "Shared stylelint config",
+  "author": "Arthur Saenko <arthur.saenz7@gmail.com> (https://github.com/ArthurSaenz)",
+  "keywords": [
+    "stylelint",
+    "config",
+    "linting"
+  ],
+  "dependencies": {
+    "stylelint": "^16.6.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-sass-guidelines": "^11.1.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.3.0"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}

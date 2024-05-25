@@ -1,0 +1,9 @@
+packages:
+  - "api/*"
+  - "apps/*"
+  - "configs/*"
+  - "libs/*"
+  - "functions/*"
+
+  # exclude packages that are inside test directories
+  - "!**/test/**"

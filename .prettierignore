@@ -1,0 +1,41 @@
+## Please check .eslintignore and .gitignore when change this file
+
+Makefile
+
+## File extensions
+*.*
+!*.css
+!*.scss
+!*.mjs
+!*.js
+!*.cjs
+!*.json
+!*.jsx
+!*.less
+!*.md
+!*.mdx
+!*.ts
+!*.tsx
+
+*.yml
+
+# Compiled output
+.cache
+.turbo
+dist
+build
+public
+tmp
+.coverage
+tsconfig.tsbuildinfo
+*.patch
+*.prerender
+ios/App/
+android/app/
+
+node_modules
+
+gradlew
+google-services.json
+categories-data-manifest.json
+routeTree.gen.ts

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "deploy": {
+      "dependsOn": ["build"]
+    },
+    "serve": {
+      "dependsOn": ["build"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "build/**"]
+    },
+    "build-watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "storybook": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true
+    },
+    "eslint-check": {
+      "dependsOn": ["^build"]
+    },
+    "eslint-fix": {
+      "dependsOn": ["^build"]
+    },
+    "ts-check": {
+      "dependsOn": ["^build"]
+    },
+    "prettier-check": {},
+    "prettier-fix": {},
+    "test": {},
+    "//#clean-cache": {
+      "cache": false,
+      "dependsOn": []
+    },
+    "clean-artifacts": {
+      "cache": false
+    },
+    "clean-cache": {
+      "cache": false
+    },
+    "website-ui#deploy": {
+      "dependsOn": ["build"]
+    },
+    "docs#deploy": {
+      "dependsOn": ["build"]
+    }
+  }
+}

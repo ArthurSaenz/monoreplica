@@ -1,0 +1,59 @@
+{
+  "name": "monoreplica",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Production ready monorepo",
+  "license": "MIT",
+  "author": "Arthur Saenko <arthur.saenz7@gmail.com> (https://github.com/ArthurSaenz)",
+  "workspaces": [
+    "apps/*",
+    "configs/*",
+    "libs/*"
+  ],
+  "keywords": [
+    "monorepo",
+    "starter-kit"
+  ],
+  "scripts": {
+    "setup": "pnpm env use --global 20.13.1 && pnpm install && pnpm run packages-build",
+    "docs": "turbo run serve --filter=documentation",
+    "docs-dev": "turbo run dev --filter=documentation",
+    "deploy-website": "turbo run deploy --filter website-ui",
+    "deploy-documentation": "turbo run deploy --filter documentation",
+    "deploy-back-office": "turbo run deploy --filter back-office",
+    "storybook": "turbo run storybook --concurrency=24",
+    "storybook-build": "turbo run storybook-build",
+    "deploy": "turbo run deploy",
+    "build": "turbo run build",
+    "packages-build": "turbo run build --filter='@monorepo/*' --force",
+    "packages-dev": "turbo run build-watch --concurrency=24",
+    "clean-cache": "rimraf .turbo ./node_modules/.cache",
+    "clean-artifacts": "turbo run clean-artifacts",
+    "clean-cache-root": "turbo run clean-cache",
+    "reset": "rimraf ./apps/*/dist ./apps/*/build ./apps/*/node_modules ./libs/*/node_modules ./libs/*/dist ./libs/*/build && rimraf node_modules",
+    "prettier-check": "pnpm exec turbo run prettier-check",
+    "prettier-fix": "pnpm exec turbo run prettier-fix",
+    "eslint-check": "pnpm exec turbo run eslint-check",
+    "eslint-fix": "pnpm exec turbo run eslint-fix",
+    "ts-check": "pnpm exec turbo run ts-check",
+    "test": "turbo run test",
+    "qa": "pnpm exec turbo run prettier-check eslint-check ts-check test"
+  },
+  "devDependencies": {
+    "@monorepo/codegen": "workspace:*",
+    "@monorepo/prettier-config": "workspace:*",
+    "@monorepo/stylelint-config": "workspace:*",
+    "@types/node": "^20.12.12",
+    "concurrently": "^8.2.0",
+    "dotenv-cli": "^7.4.2",
+    "hygen": "^6.2.11",
+    "rimraf": "^5.0.7",
+    "serve": "^14.2.3",
+    "turbo": "^1.13.3"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.1.2"
+}

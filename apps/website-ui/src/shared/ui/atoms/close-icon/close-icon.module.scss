@@ -1,0 +1,66 @@
+.root {
+  all: unset;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+
+  > span {
+    padding: 4px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    background-color: #000;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &--default {
+    color: #fff;
+
+    > span {
+      background-color: #000;
+    }
+  }
+
+  &--primary {
+    color: #000;
+
+    > span {
+      background-color: #fff;
+    }
+  }
+
+  &--small {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &--medium {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--large {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

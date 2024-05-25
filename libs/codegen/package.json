@@ -1,0 +1,35 @@
+{
+  "name": "@monorepo/codegen",
+  "version": "0.1.8",
+  "description": "Codegen by feature sliced",
+  "license": "MIT",
+  "author": "Arthur Saenko <arthur.saenko@uptarget.co> (https://github.com/ArthurSaenz)",
+  "keywords": [
+    "codegen",
+    "scripts"
+  ],
+  "type": "module",
+  "main": "./index.mjs",
+  "bin": {
+    "code-generate": "./index.mjs"
+  },
+  "scripts": {
+    "prettier-fix": "prettier **/* --write --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore",
+    "prettier-check": "prettier **/* --check --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore"
+  },
+  "dependencies": {
+    "hygen": "^6.2.11",
+    "inquirer": "^9.2.22",
+    "inquirer-file-tree-selection-prompt": "^2.0.5",
+    "zx": "^8.1.1"
+  },
+  "peerDependencies": {
+    "hygen": "^6.2.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}

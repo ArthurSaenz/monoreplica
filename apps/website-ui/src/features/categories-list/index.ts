@@ -1,0 +1,1 @@
+export { CategoriesListController } from './controller'

@@ -1,0 +1,29 @@
+{
+  "name": "@monorepo/zx-script-template",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Script engine (template)",
+  "author": "Arthur Saenko <arthur.saenko@uptarget.co> (https://github.com/ArthurSaenz)",
+  "keywords": [
+    "scripts",
+    "infrastructure scripts",
+    "bash commands",
+    "dev scripts"
+  ],
+  "type": "module",
+  "main": "./index.mjs",
+  "bin": {
+    "zx-script-template": "./index.mjs"
+  },
+  "scripts": {
+    "prettier-fix": "prettier **/* --write --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore",
+    "prettier-check": "prettier **/* --check --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.22",
+    "zx": "^8.1.1"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}

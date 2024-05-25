@@ -1,0 +1,189 @@
+:root {
+  /* Layouts */
+  --z-index-search-icon: 10;
+  --z-index-search-overlay: 11;
+  --z-index-search-content: 12;
+  --z-index-search-header-mobile: 20;
+  --z-index-sorting-mobile: 50;
+  --z-index-ads-bottom: 100;
+  --z-index-navigation-mobile: 420;
+  --z-index-search-mobile-sticky: 440;
+  --z-index-search-mobile: 450;
+  --z-index-hamburger-mobile: 480;
+
+  /* New Layout */
+  --z-index-product-card: 40;
+  --z-index-product-navigation: 50;
+  --z-index-header-mobile: 60;
+  --z-index-filters-mobile: 70;
+  --z-index-filterBackdrop: 430;
+  --z-index-modalBackDrop: 460;
+  --z-index-modal: 470;
+
+  /* Colors */
+  --color-primary: #f75064;
+
+  --background-default: #fff;
+  --background-primary: #35394d;
+  --background-secondary: #ebeeff;
+  --background-tertiary: #f5f7f7;
+  --background-quaternary: #606581;
+
+  --text-color-default: #606581;
+  --text-color-hover: #d1214c;
+  --text-color-accent: #ff4fb1;
+  --text-color-primary: #fff;
+  --text-color-secondary: #f5f7f7;
+  --text-color-tertiary: #fff;
+  --text-color-quaternary: #717171;
+  --border-color-default: #d6d6d6;
+
+  /* Padding */
+  --padding-inline-mobile-default: 12px;
+
+  /* Fonts */
+  --font-primary: 'Pauza', sans-serif;
+
+  /* Heights */
+  --filters-mobile-height: 56px;
+
+  --navigation-mobile-height: 70px;
+  --header-mobile-height: 50px;
+  --header-desktop-height: 70px;
+  --sorting-mobile-height: 0px;
+  --bottom-ads-mobile-height: 50px;
+  --filters-width-desktop: 210px;
+  --search-panel-mobile-height: 44px;
+
+  --menu-items-desktop-width: 106px;
+  --menu-items-desktop-height: 115px;
+  --menu-items-mobile-height: 40px;
+
+  --container-desktop-width: 930px;
+  --side-ads-desktop-width: 160px;
+  --container-padding-x-mobile: 12px;
+
+  /* Sizes */
+  --border-radius-default: 14px;
+  --border-radius-primary: 10px;
+}
+
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  color: #000;
+  font-weight: normal;
+  font-family: 'Pauza', sans-serif;
+  line-height: 1;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  min-height: 100dvh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+/* FIXME */
+#page-view {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  min-height: 100dvh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Accesability plugin */
+#INDbtnWrap {
+  display: none;
+  visibility: hidden;
+}
+
+@font-face {
+  font-weight: 200;
+  font-family: 'Pauza';
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/Pauza-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: 'Pauza';
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/Pauza-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Pauza';
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/Pauza-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Pauza';
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/Pauza-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Pauza';
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/Pauza-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-family: 'Pauza';
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/Pauza-Black.woff2') format('woff2');
+}
+
+@media (max-width: 930px) {
+  /* #page-view {
+    padding-bottom: var(--navigation-mobile-height);
+  } */
+}
+
+.adsbygoogle-root {
+  margin-inline: auto;
+  display: block;
+}
+
+/* #page-content {
+  transition: opacity 0.1s ease-in;
+}
+
+#page-content.page-transition {
+  opacity: 0;
+} */

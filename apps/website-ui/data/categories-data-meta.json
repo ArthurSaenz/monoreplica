@@ -1,0 +1,14 @@
+{
+  "flights": {
+    "title": "Flights category title",
+    "metaDescription": "Flights category meta description"
+  },
+  "domestic": {
+    "title": "Domestic category title",
+    "metaDescription": "Domestic category meta description"
+  },
+  "shows": {
+    "title": "Shows category title",
+    "metaDescription": "Shows category meta description"
+  }
+}

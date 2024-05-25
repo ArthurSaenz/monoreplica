@@ -1,0 +1,126 @@
+.root-primary {
+  --gap-y: 24px;
+
+  direction: rtl;
+}
+
+.background-default {
+  background-image: linear-gradient(
+    to bottom,
+    #ebeeff,
+    #ebeeff,
+    #eff1ff,
+    #f3f4ff,
+    #f7f8ff,
+    #fbfbff,
+    #fbfbff,
+    #fbfbff,
+    #fbfbff,
+    #f7f8ff,
+    #f3f4ff,
+    #eff1ff,
+    #ebeeff
+  );
+}
+
+.container {
+  width: min(100%, var(--container-desktop-width));
+  margin-inline: auto;
+  display: grid;
+  gap: 24px var(--gap-y);
+  grid-template-areas:
+    'header header'
+    'main sidebar';
+  grid-template-columns: 5fr 2fr;
+  padding-inline: 0px;
+  padding-bottom: 40px;
+
+  &--shows-details {
+    padding-top: 20px;
+    grid-template-areas:
+      'header sidebar'
+      'main sidebar';
+  }
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  gap: var(--gap-y);
+}
+
+.navigation {
+  position: static;
+  // position: sticky;
+  z-index: var(--z-index-product-navigation);
+  top: 0;
+  background-color: var(--background-secondary);
+  padding: 12px 0 14px;
+
+  > div {
+    width: min(100%, var(--container-desktop-width));
+    margin-inline: auto;
+  }
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  gap: var(--gap-y);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .background-default {
+    background-image: linear-gradient(
+      180deg,
+      hsl(0deg 0% 100%) 0%,
+      hsl(228deg 100% 100%) 4%,
+      hsl(228deg 100% 99%) 9%,
+      hsl(228deg 100% 99%) 14%,
+      hsl(228deg 100% 98%) 19%,
+      hsl(228deg 100% 98%) 25%,
+      hsl(228deg 100% 97%) 32%,
+      hsl(228deg 100% 97%) 41%,
+      hsl(228deg 100% 97%) 55%,
+      hsl(228deg 100% 96%) 100%
+    );
+  }
+
+  .navigation {
+    position: static;
+    top: 0;
+    padding: 8px var(--container-padding-x-mobile) 12px;
+    background-color: transparent;
+
+    > div {
+      width: min(100%, var(--container-desktop-width));
+      margin-inline: auto;
+    }
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'main'
+      'sidebar';
+    gap: 12px;
+    padding-inline: var(--container-padding-x-mobile);
+    padding-bottom: 140px;
+
+    &--no-padding-x {
+      padding-inline: 0px;
+    }
+
+    &--flights-details,
+    &--hotels-details,
+    &--shows-details {
+      padding-bottom: 0;
+    }
+  }
+}

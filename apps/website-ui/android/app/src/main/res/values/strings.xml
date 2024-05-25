@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">חוליו, עקיצה לחול</string>
+    <string name="title_activity_main">חוליו, עקיצה לחול</string>
+    <string name="package_name">com.devsense.hulyo</string>
+    <string name="custom_url_scheme">com.devsense.hulyo</string>
+    <string name="admob_app_id">ca-app-pub-8777607459973145~8566980802</string>
+</resources>

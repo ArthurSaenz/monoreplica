@@ -1,0 +1,1 @@
+export { MobileAdb } from './admob'

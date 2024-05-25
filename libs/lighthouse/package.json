@@ -1,0 +1,27 @@
+{
+  "name": "@arters/lighthouse",
+  "version": "1.0.4",
+  "description": "Frontend Web App",
+  "license": "MIT",
+  "author": "Arthur Saenko <arthur.saenko@uptarget.co> (https://github.com/ArthurSaenz)",
+  "keywords": [
+    "core",
+    "scripts"
+  ],
+  "type": "module",
+  "main": "./index.mjs",
+  "bin": "./index.mjs",
+  "scripts": {
+    "prettier-fix": "prettier **/* --write --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore",
+    "prettier-check": "prettier **/* --check --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore"
+  },
+  "dependencies": {
+    "zx": "^8.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}

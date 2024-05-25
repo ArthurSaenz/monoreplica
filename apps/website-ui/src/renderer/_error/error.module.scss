@@ -1,0 +1,44 @@
+.root {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  color: var(--text-color-default);
+  width: min(85vw, 580px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 500;
+  width: min(85vw, 380px);
+}
+
+.title {
+  font-size: 86px;
+  font-weight: 700;
+  color: #ea44ab;
+}
+
+.subtitle {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.image {
+  width: 260px;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 70px;
+  }
+
+  .image {
+    width: 240px;
+  }
+}

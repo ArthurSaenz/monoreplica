@@ -1,0 +1,12 @@
+__snapshots__
+node_modules
+.coverage
+dist
+build
+.turbo
+.cache
+.git
+.vscode
+
+*.config.js
+routeTree.gen.ts

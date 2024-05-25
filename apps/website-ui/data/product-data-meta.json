@@ -1,0 +1,14 @@
+{
+  "flights": {
+    "title": "FLights product title",
+    "metaDescription": "Flights product meta description"
+  },
+  "domestic": {
+    "title": "Domestic product title",
+    "metaDescription": "Domestic product meta description"
+  },
+  "shows": {
+    "title": "Shows product title",
+    "metaDescription": "Shows product meta description"
+  }
+}

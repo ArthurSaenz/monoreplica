@@ -1,0 +1,52 @@
+{
+  "name": "e2e",
+  "private": true,
+  "version": "0.1.0",
+  "description": "End to end testing",
+  "author": "Arthur Saenko <arthur.saenko@uptarget.co> (https://github.com/ArthurSaenz)",
+  "keywords": [
+    "e2e",
+    "codeceptjs",
+    "typescript",
+    "playwright"
+  ],
+  "scripts": {
+    "clean-artifacts": "rm -rf output",
+    "clean-cache": "rm -rf node_modules/.cache .eslintcache tsconfig.tsbuildinfo .turbo",
+    "ts-check": "tsc --noEmit",
+    "prettier-fix": "prettier **/* --write --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore",
+    "prettier-check": "prettier **/* --check --no-error-on-unmatched-pattern --ignore-path ../../.prettierignore",
+    "qa": "pnpm run prettier-check && pnpm run ts-check",
+    "e2e-test": "codeceptjs run --steps",
+    "e2e-test-dev": "node ./scripts/main.mjs",
+    "e2e-test-headless": "HEADLESS=true codeceptjs run --steps",
+    "e2e-test-ui": "codecept-ui",
+    "e2e-test-demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+    "e2e-test-demo-headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+    "e2e-test-demo-ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples",
+    "generate-helper": "codeceptjs generate:helper",
+    "generate-fragment": "codeceptjs go --type fragment",
+    "generate-pageObject": "codeceptjs generate:pageobject",
+    "info-list": "codeceptjs list"
+  },
+  "devDependencies": {
+    "@codeceptjs/configure": "^1.0.1",
+    "@codeceptjs/examples": "^1.2.4",
+    "@codeceptjs/ui": "^1.1.1",
+    "@faker-js/faker": "^8.4.1",
+    "@monorepo/eslint-config": "workspace:*",
+    "@types/node": "^20.12.12",
+    "codeceptjs": "3.6.2",
+    "cross-fetch": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "inquirer": "^9.2.22",
+    "playwright": "^1.44.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "zx": "^8.1.1"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

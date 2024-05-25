@@ -1,0 +1,22 @@
+{
+  "name": "@monorepo/prettier-config",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "description": "Shared prettier config",
+  "author": "Arthur Saenko <arthur.saenz7@gmail.com> (https://github.com/ArthurSaenz)",
+  "keywords": [
+    "prettier",
+    "config",
+    "formatting"
+  ],
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}
